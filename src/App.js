@@ -1,14 +1,14 @@
 import React from 'react'
-import { Provider, Heading, Subhead, Flex, Container, Box, Button, Text, Input} from 'rebass'
+import { Heading, Flex, Box, Button} from 'rebass'
 import {
-  Hero, CallToAction, ScrollDownIndicator, Section, Checklist, Phone, Feature, SignUp
+  Hero, ScrollDownIndicator, Section, Checklist, Phone, Feature
 } from 'react-landing-page'
 import firebase from 'firebase';
 import './App.css'
 import { Form , Row} from 'react-bootstrap';
 import ReactGA from 'react-ga';
 import { ToastContainer, toast } from 'react-toastify';
-  import 'react-toastify/dist/ReactToastify.css'
+import 'react-toastify/dist/ReactToastify.css'
 
 const featherCheckmark = <svg
   xmlns="http://www.w3.org/2000/svg"
