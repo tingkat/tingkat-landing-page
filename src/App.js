@@ -6,6 +6,7 @@ import {
 import firebase from 'firebase';
 import './App.css'
 import { Form , Row} from 'react-bootstrap';
+import ReactGA from 'react-ga';
 
 const featherCheckmark = <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -34,6 +35,7 @@ class App extends React.Component {
     email: '',
   }
 
+
   handleInputChange = (event) => {
     this.setState({ [event.target.name]: event.target.value });
   };
@@ -51,6 +53,8 @@ class App extends React.Component {
   }
 
   render() {
+    ReactGA.initialize('UA-138658194-1');
+    ReactGA.pageview('/');
     const { email} = this.state;
     return(
   <div>
