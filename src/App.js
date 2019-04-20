@@ -7,6 +7,8 @@ import firebase from 'firebase';
 import './App.css'
 import { Form , Row} from 'react-bootstrap';
 import ReactGA from 'react-ga';
+import { ToastContainer, toast } from 'react-toastify';
+  import 'react-toastify/dist/ReactToastify.css'
 
 const featherCheckmark = <svg
   xmlns="http://www.w3.org/2000/svg"
@@ -43,6 +45,14 @@ class App extends React.Component {
     event.preventDefault();
     const { email } = this.state;
     if (email === '') {
+      toast('Please Enter email', {
+        type: 'info',
+        autoClose: 2000,
+        hideProgressBar: true,
+        position: toast.POSITION.BOTTOM_CENTER,
+        closeButton: false,
+        draggable: false,
+    });
       return;
     }
     var database = firebase.database();
@@ -50,6 +60,15 @@ class App extends React.Component {
       email,
       timestamp: Date.now(),
     })
+    this.setState({email: ''})
+    toast('Thank you! We will keep you in the loop!', {
+      type: 'success',
+      autoClose: 2000,
+      hideProgressBar: true,
+      position: toast.POSITION.BOTTOM_CENTER,
+      closeButton: false,
+      draggable: false,
+  });
   }
 
   render() {
@@ -63,6 +82,7 @@ class App extends React.Component {
       bg="white"
       backgroundImage="https://i.ibb.co/T1STGR8/2.jpg"
     >
+    <ToastContainer/>
         <Heading fontSize="50px">Tingkat</Heading>
         <br></br>
         <Heading textAlign="center" fontSize="15px">What's cooking? </Heading>

@@ -11,6 +11,7 @@
     "react-ga": "^2.5.7",
     "react-landing-page": "^2.0.2",
     "react-scripts": "2.1.8",
+    "react-toastify": "^5.1.0",
     "rebass": "^3.0.0-12",
     "styled-components": "^4.2.0"
   },
