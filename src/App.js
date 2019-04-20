@@ -1,11 +1,11 @@
 import React from 'react'
-import { Heading, Flex, Box, Button} from 'rebass'
+import { Heading, Flex, Button} from 'rebass'
 import {
   Hero, ScrollDownIndicator, Section, Checklist, Phone, Feature
 } from 'react-landing-page'
 import firebase from 'firebase';
 import './App.css'
-import { Form , Row} from 'react-bootstrap';
+import { Form} from 'react-bootstrap';
 import ReactGA from 'react-ga';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css'
@@ -94,7 +94,7 @@ class App extends React.Component {
                 style={{transform: 'translate(-32px, 0px)'}} />
         </Flex>
         <Flex width={[1, 1 / 2]} alignItems='center' flexDirection='column' p={3} >
-            <Heading>Interested? Sign up to get updates</Heading>
+            <Heading className={"mobile"}>Interested? Sign up to get updates</Heading>
             {/* <Subhead fontSize={[2, 3]}>2 Screenshots & links</Subhead> */}
             <br></br>
 
